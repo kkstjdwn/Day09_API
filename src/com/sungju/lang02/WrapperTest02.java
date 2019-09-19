@@ -18,6 +18,7 @@ public class WrapperTest02 {
 
 		System.out.println("비밀번호 정하셈");
 		String pw = sc.next();
+
 		boolean check = false;
 		int da = 0;
 		int so = 0;
@@ -25,13 +26,16 @@ public class WrapperTest02 {
 		int ws = 0;
 
 		for (int i = 0; i < pw.length(); i++) {
-			char ch = pw.charAt(i);
-			da = Character.isUpperCase(ch) ? da++ : da;
-			so = Character.isLowerCase(ch) ? so++ : so;
-			su = Character.isDigit(ch) ? su++ : su;
-			ws = Character.isWhitespace(ch) ? ws++ : ws;
+
+
+			da = Character.isUpperCase(pw.charAt(i)) ? da+1 : da;
+			so = Character.isLowerCase(pw.charAt(i)) ? so+1 : so;
+			su = Character.isDigit(pw.charAt(i)) ? su+1 : su;
+			ws = Character.isWhitespace(pw.charAt(i)) ? ws+1 : ws;
 
 		}
+
+
 
 		if (pw.length() > 7 && da > 1 && so > 1 && su > 0 && ws == 0) {
 			check = true;
@@ -42,8 +46,8 @@ public class WrapperTest02 {
 		} else {
 			System.out.println("다시설정");
 		}
-		
-		System.out.println("ssss");
+
+
 
 	}
 
