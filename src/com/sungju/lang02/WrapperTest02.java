@@ -42,6 +42,8 @@ public class WrapperTest02 {
 		} else {
 			System.out.println("다시설정");
 		}
+		
+		System.out.println("ssss");
 
 	}
 
